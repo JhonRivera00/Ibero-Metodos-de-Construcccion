@@ -3,44 +3,45 @@
 
 
 -> Definicion del Proyecto
-   COMPRAS ONLINE
+   Compras de Cafe
 
 
 -> Requerimientos del Proyecto
 
-1) Gestión de Usuarios
-El sistema debe permitir la creación y gestión de Usuarios con dos roles: Administrador y Cliente.
-Clientes deben poder actualizar sus datos personales (nombre, email, dirección).
-Administradores deben poder gestionar el inventario, ver reportes de ventas y gestionar otros usuarios.
+1. Perfiles de usuario:
+Cliente: Usuario que realiza las compras de café. Se registra con su cédula, nombre completo, municipio, punto de acopio y si es asociado o no.
+Acopiador: Responsable de subir las compras al sistema. Puede registrar clientes, gestionar compras y ver un resumen de las compras realizadas.
+Administrador: Tiene control total sobre el sistema. Puede gestionar usuarios (clientes y acopiadores), verificar compras, generar reportes y exportar datos.
 
-2) Gestión de Productos
-Los Administradores deben poder añadir, editar y eliminar Productos.
-Cada Producto debe tener atributos como id, nombre, descripción, precio, stock e imágenes.
-Los Clientes deben poder ver los detalles de los productos, incluidos los atributos y las imágenes.
 
-3) Carrito de Compras
-Clientes deben poder agregar productos al Carrito y gestionar su contenido (añadir, eliminar productos).
-El sistema debe calcular el total del Carrito en base a los productos añadidos y su cantidad.
+2. Funcionalidades del Acopiador:
+Registrar nuevas compras de café, indicando:
+Número de kilos.
+Valor por kilo.
+Total de la compra.
+Registrar nuevos clientes ingresando:
+Municipio de procedencia.
+Punto de acopio.
+Asociado o no.
+Cédula.
+Nombre completo.
+Verificar si el cliente ya está registrado antes de agregarlo nuevamente.
+Ver un resumen total de las compras realizadas.
+Filtrar compras por fecha y cliente.
 
-4) Gestión de Pedidos
-Los Clientes deben poder realizar un Pedido desde el Carrito.
-El sistema debe generar un Pedido con la información del Cliente, el Carrito y la fecha.
-El estado del Pedido debe ser rastreable (Ej. "Pendiente", "Enviado").
+3. Funcionalidades del Administrador:
+Ver todos los clientes registrados y asignarles el rol de acopiador con una contraseña.
+Habilitar o deshabilitar acopiadores.
+Ver todas las compras realizadas por los acopiadores.
+Verificar compras y guardarlas como compras verificadas.
+Exportar las compras a Excel.
+Filtrar compras por fecha, cliente y acopiador.
 
-5) Integración con WhatsApp
-Al finalizar un Pedido, el sistema debe generar una URL para redirigir al Cliente a WhatsApp.
-La URL debe incluir los detalles del Pedido y un mensaje base para iniciar la conversación con el Administrador.
-El Administrador debe recibir los detalles del Pedido y acordar el pago con el Cliente a través de WhatsApp.
+4. Requerimientos adicionales:
+La interfaz del sistema debe permitir la fácil navegación y gestión de los diferentes roles.
+Los filtros deben ser dinámicos y eficientes para mejorar la gestión de información.
+Debe garantizarse la integridad de los datos al registrar clientes y compras.
 
-6) Sistema de Pago
-El sistema debe permitir que el pago se acuerde por WhatsApp, no se realiza en línea.
-El Administrador debe actualizar el estado del Pedido a "Pagado" una vez que se confirme el pago fuera del sistema.
-
-7) Reportes y Estadísticas
-Los Administradores deben poder generar reportes de ventas con información como fecha y ventas totales.
-
-8) Historial de Pedidos
-Los Clientes deben poder ver un historial de sus Pedidos anteriores.
 
 -> Metodologia a Utilizar 
 
@@ -50,6 +51,3 @@ Los Clientes deben poder ver un historial de sus Pedidos anteriores.
    antes de que el proyecto este completamente desarrollado, ya que con esta metodologia nos facilita 
    la comunicacion con los otros miembros del equipo (Daily Srum) nos mantiene informados sobre el progreso
    y posibles cambios que se pueden realizar.
-
-
-

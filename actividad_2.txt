@@ -51,6 +51,3 @@ Debe garantizarse la integridad de los datos al registrar clientes y compras.
    antes de que el proyecto este completamente desarrollado, ya que con esta metodologia nos facilita 
    la comunicacion con los otros miembros del equipo (Daily Srum) nos mantiene informados sobre el progreso
    y posibles cambios que se pueden realizar.
-
-
-
